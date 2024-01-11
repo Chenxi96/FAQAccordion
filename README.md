@@ -77,13 +77,13 @@ p {
 ```js
 const first = document.getElementById('first');
 first.addEventListener('click', showParagraph1);
-function showParagraph1() {
-      if(document.getElementById('firstP').style.display === 'none') {
-        document.getElementById('firstP').style.display = 'block';
-        document.getElementById('1').src ='/assets/images/icon-minus.svg';
+    function showParagraph() {
+      if(this.lastChild.previousSibling.style.display === 'none') {
+        this.lastChild.previousSibling.style.display = 'block';
+        this.childNodes[1].childNodes[1].childNodes[1].src ='/assets/images/icon-minus.svg';
       } else {
-        document.getElementById('firstP').style.display = 'none';
-        document.getElementById('1').src ='/assets/images/icon-plus.svg';
+        this.lastChild.previousSibling.style.display = 'none';
+        this.childNodes[1].childNodes[1].childNodes[1].src ='/assets/images/icon-plus.svg';
       }
     }
 ```
