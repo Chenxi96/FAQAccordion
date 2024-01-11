@@ -84,48 +84,19 @@
     const second = document.getElementById('second');
     const third = document.getElementById('third');
     const end = document.getElementById('end');
-    first.addEventListener('click', showParagraph1);
-    second.addEventListener('click', showParagraph2);
-    third.addEventListener('click', showParagraph3);
-    end.addEventListener('click', showParagraph4);
+    first.addEventListener('click', showParagraph);
+    second.addEventListener('click', showParagraph);
+    third.addEventListener('click', showParagraph);
+    end.addEventListener('click', showParagraph);
 
-    function showParagraph1() {
-      if(document.getElementById('firstP').style.display === 'none') {
-        document.getElementById('firstP').style.display = 'block';
-        document.getElementById('1').src ='/assets/images/icon-minus.svg';
-      } else {
-        document.getElementById('firstP').style.display = 'none';
-        document.getElementById('1').src ='/assets/images/icon-plus.svg';
-      }
-    }
 
-    function showParagraph2() {
-      if(document.getElementById('secondP').style.display === 'none') {
-        document.getElementById('secondP').style.display = 'block';
-        document.getElementById('2').src ='/assets/images/icon-minus.svg';
+    function showParagraph() {
+      if(this.lastChild.previousSibling.style.display === 'none') {
+        this.lastChild.previousSibling.style.display = 'block';
+        this.childNodes[1].childNodes[1].childNodes[1].src ='/assets/images/icon-minus.svg';
       } else {
-        document.getElementById('secondP').style.display = 'none';
-        document.getElementById('2').src ='/assets/images/icon-plus.svg';
-      }
-    }
-
-    function showParagraph3() {
-      if(document.getElementById('thirdP').style.display === 'none') {
-        document.getElementById('thirdP').style.display = 'block';
-        document.getElementById('3').src ='/assets/images/icon-minus.svg';
-      } else {
-        document.getElementById('thirdP').style.display = 'none';
-        document.getElementById('3').src ='/assets/images/icon-plus.svg';
-      }
-    }
-
-    function showParagraph4() {
-      if(document.getElementById('endP').style.display === 'none') {
-        document.getElementById('endP').style.display = 'block';
-        document.getElementById('4').src ='/assets/images/icon-minus.svg';
-      } else {
-        document.getElementById('endP').style.display = 'none';
-        document.getElementById('4').src ='/assets/images/icon-plus.svg';
+        this.lastChild.previousSibling.style.display = 'none';
+        this.childNodes[1].childNodes[1].childNodes[1].src ='/assets/images/icon-plus.svg';
       }
     }
 
